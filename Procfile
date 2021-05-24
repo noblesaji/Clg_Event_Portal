@@ -1,1 +1,1 @@
-web: gunicorn app:eventus
+web: flask db upgrade; gunicorn eventus:app
