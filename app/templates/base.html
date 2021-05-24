@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<div style="background-image: url('https://www.xmple.com/wallpaper/linear-white-gradient-blue-1920x1080-c2-b0c4de-faebd7-a-285-f-14.svg');">
+    <head>
+        {% if title %}
+        <title>{{ title }} - Eventus</title>
+        {% else %}
+        <title>Welcome to The Eventus Portal</title>
+        {% endif %}
+        
+    </head>
+    <body>
+        <div>
+        <b>The Eventus Portal:</b> 
+        <a href="{{ url_for('index') }}">Home</a>
+        {% if current_user.is_anonymous %}
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('signup') }}">Sign Up</a>
+        {% else %}
+        <a href="{{ url_for('create') }}">Create New Event</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% endif %}
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </body>
+</div>
+</html>
