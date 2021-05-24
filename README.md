@@ -1,4 +1,4 @@
-# The Eventus Project
+# The Eventus Portal
 An Event Portal to access and manage events held in the college
 
 ### Features
