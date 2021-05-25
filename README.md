@@ -14,7 +14,7 @@ This portal is able to (but not limited to) do the following:
 BFH/recf7GNsMTHX1MQoM/2021
 
 ## Link to product walkthrough
-[link to video]
+https://www.loom.com/share/2fede05a4c0a4301b6fe9784e810446e
 
 ## How it Works ?
 1. It uses the Flask framework in Python to create the website and a flask dependency called SQLAlchemy to manage the database.
