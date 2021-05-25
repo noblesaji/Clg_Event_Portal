@@ -1,5 +1,5 @@
 import os
-basedir = os.path.abspath(os.path.dirname(__file__))
+basedir = os.path.dirname(os.path.abspath(__file__))
 
 from dotenv import load_dotenv
 load_dotenv()

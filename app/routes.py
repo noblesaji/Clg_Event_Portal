@@ -14,16 +14,6 @@ from datetime import datetime
 def index():
     my_events = current_user.registered_events().all()
     all_events = Event.query.order_by(Event.timestamp.desc()).all()
-    '''[
-        {
-            'author' : {'username' : 'John'},
-            'event_name' : 'Beautiful day in Portland'
-        },
-        {
-            'author' : {'username' : 'Susan'},
-            'event_name' : 'The Avengers movie was so cool!'
-        }
-    ]'''
     return render_template('index.html', title='Home Page', my_events=my_events, all_events=all_events)
 
 @app.route('/login', methods=['GET','POST'])
